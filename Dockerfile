@@ -16,5 +16,5 @@ ENV PATH /opt/conda/bin:$PATH
 # Update conda and install tools
 RUN conda update -n base -c defaults conda && \
     conda create -n htseq_env python=2.7 && \
-    conda run -n htseq_env conda install -c bioconda -c conda-forge htseq=0.6.1.post1 && \
+    conda run -n htseq_env conda install -y -c bioconda -c conda-forge htseq=0.6.1.post1 && \
     conda create -n samtools_env samtools=1.14 -c bioconda -c conda-forge
